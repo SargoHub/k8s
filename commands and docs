@@ -1,7 +1,47 @@
 The Kubernetes documentation to refer - 
 https://kubernetes.io/
 
+kubectl commands cheat sheet -
+https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+to validate the yaml file -
+https://www.yamllint.com/
+
+
 Installing Minikube - 
 https://github.com/SargoHub/kubernetes_workshop_intellipaat/blob/main/minikube_Installtion_Oct2023.md
+
+
+COMMANDS -
+
+kubectl 
+  to list all the kubectl verbs commands 
+kubectl get nodes 
+  to list the nodes of the cluster
+kubectl get pods
+  to list the pods running 
+vi name.yaml
+  for creating a pod using declerative way, we have to create the YAML file.
+kubectl apply -f name.yaml 
+  to create the object(POD in this case) using the yaml file
+kubectl describe pod <podname>
+  to see the details about the object
+kubectl delete pod <podname>
+  to delete the POD
+vi myrs.yaml
+  creating the yaml file for the replica set
+kubectl apply -f myrs.yaml
+  to create the replica set object
+kubectl get rs
+  to list the replica sets running
+kubectl scale --replicas=5 replicaset <rs name>
+  to scale the pods in the replica set
+kubectl edit rs <rs name>
+  to edit the replica set file ( a risky way of doing it )
+vi myrs.yaml
+  third way is to edit the yaml file itsef ( once edited you have to run the kubectl apply again )
+
+
+
 
 
