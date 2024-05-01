@@ -1,4 +1,4 @@
-The Kubernetes documentation to refer - 
+0  The Kubernetes documentation to refer - 
 https://kubernetes.io/
 
 kubectl commands cheat sheet -
@@ -12,7 +12,7 @@ Installing Minikube -
 https://github.com/SargoHub/kubernetes_workshop_intellipaat/blob/main/minikube_Installtion_Oct2023.md
 
 
-COMMANDS -
+KUBECTL COMMANDS -
 
 kubectl 
   to list all the kubectl verbs commands 
@@ -40,6 +40,34 @@ kubectl edit rs <rs name>
   to edit the replica set file ( a risky way of doing it )
 vi myrs.yaml
   third way is to edit the yaml file itsef ( once edited you have to run the kubectl apply again )
+kubectl delete rs <rs name>
+  it will delete the replica-set 
+vi mydep.yaml
+  creating the yaml file for deployment object
+kubectl get deployments.apps
+  to list the running deployments
+kubectl apply -f mydep.yaml
+  to create the deployment object ( this will create a rs also by itself)
+kubectl describe deployments.apps <deployment name>
+  to show to the deployment's detailed description (like, container image version, no. of replicas etc )
+kubectl edit deployments.apps <deployment name>
+  ro edit the deployment file, no. of replicas
+kubectl get pod --watch
+  this is a live command which keeps on updating the pods list
+kubectl set image deployment/<deployment name> nginx=nginx:1.16.1
+  to update the image version in the deployment ( this will trigger the rolling update )
+kubectl rollout status deployment/<deployment name>
+  to check the status of the update rollout
+kubectl rollout history deployment/<deployment name>
+  to list the rollout revisions 
+kubectl rollout history deployment/<deployment name> --revision=2
+  to list the details of a specific rollout revision 
+kubectl rollout undo deployment/<deployment name>
+  to roll back to the previous version of the deployment ( the older POD version)
+kubectl get pod -o wide 
+  to see the IP address of the PODS running
+
+
 
 
 
