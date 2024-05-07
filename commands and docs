@@ -67,6 +67,18 @@ kubectl rollout undo deployment/<deployment name>
 kubectl get pod -o wide 
   to see the IP address of the PODS running
 
+AWS EKS CLUSTER -
+
+kubectl get pod --show-labels
+  to list pods along with their label details
+kubectl get pod -l app=nginx
+  to list pod having a specific label
+kubectl label --overwrite pod <name> app=login
+  to overwrite the label of a POD with something new
+kubectl get pod -o wide 
+  to check on which node the POD is running 
+vi
+
 
 
 
