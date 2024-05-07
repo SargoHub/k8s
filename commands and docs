@@ -77,7 +77,19 @@ kubectl label --overwrite pod <name> app=login
   to overwrite the label of a POD with something new
 kubectl get pod -o wide 
   to check on which node the POD is running 
-vi
+vi my-service.yaml
+  created the YAML file for the service object
+kubectl apply -f my-service.yaml
+  to create the service
+kubectl get service / kubectl get svc
+  to list the services running 
+kubectl describe svc <service name>
+  to list the detail about a service 
+kubectl get ep
+  to list the endpoints created by a service
+kubectl delete svc <service-name>
+  to delete the service 
+
 
 
 
