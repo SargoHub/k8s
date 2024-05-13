@@ -91,6 +91,33 @@ kubectl delete svc <service-name>
   to delete the service 
 
 
+KUBERNETES VOLUMES -
+
+These commands are run on the Ec2 using which we are managing the EKS cluster
+kubectl get pv 
+  to list the persistent volumes
+kubectl get pvc
+  to list the persitent volume claims
+vi mypv.yaml
+  create the PV (it has, capacity, access mode, persistenvolumereclaimpolicy, storage class, hostpath)
+kubectl apply -f mypv.yaml
+  to create the PV
+kubectl get pv 
+  to list the persistent volumes and see some details
+vi mypvc.yaml
+  to create a persistent volume claim 
+kubectl apply -f mypvc.yaml
+  to create the PVC
+kubectl get pvc
+  to list the persitent volume claims
+
+
+
+
+
+
+
+
 
 
 
