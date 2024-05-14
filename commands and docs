@@ -110,6 +110,20 @@ kubectl apply -f mypvc.yaml
   to create the PVC
 kubectl get pvc
   to list the persitent volume claims
+vi mydep.yaml
+  to create a Deployment file (in this yaml the pvc is called and also the vloume mount path in the container is given)
+kubectl apply -f mydep.yaml
+  to create the deployment object 
+kubectl get pod 
+  to get the pod created
+kubectl exec -it <pod name> bash
+  to connect to the pod
+cd to the mount path to use the volume mounted
+
+
+
+
+
 
 
 
