@@ -121,6 +121,32 @@ kubectl exec -it <pod name> bash
 cd to the mount path to use the volume mounted
 
 
+CONFIG MAP AND SECRET
+
+vi mycm.yaml
+  to create the yaml file for config map ( it has a data component where the data as key=value is passed)
+kubectl apply -f mycm.yaml
+  to apply the file and create the congifmap
+kubectl get cm
+  to list the configMap
+kubectl describe cm <name> 
+  to see the detail of the configMap
+
+vi mysecret.yaml
+  to create the secret 
+kubectl apply -f mysecret.yaml
+  to create the secret object
+kubectl get secret
+  to list the secret object
+kubectl describe secret <name> 
+  to see the details ( but in this case of secret the data passed is not visible)
+
+
+
+  
+
+
+
 
 
 
